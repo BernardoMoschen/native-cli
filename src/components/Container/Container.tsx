@@ -1,21 +1,7 @@
-import React, { FC, ReactNode } from 'react';
-import { ScrollView } from 'react-native';
+import styled from 'styled-components/native';
 
-type Props = {
-  children: ReactNode;
-};
-
-export const Container: FC<Props> = ({ children }) => {
-  return (
-    <ScrollView
-      style={{
-        flex: 1,
-        paddingHorizontal: 16,
-        paddingVertical: 24,
-        alignSelf: 'center',
-      }}
-    >
-      {children}
-    </ScrollView>
-  );
-};
+export const Container = styled.ScrollView({
+  flex: 1,
+  paddingHorizontal: 16,
+  paddingVertical: 22,
+});
