@@ -1,6 +1,6 @@
 import { Platform, ScrollView, Text } from 'react-native';
 import React from 'react';
-import { Layout, Container } from '../components';
+import { Layout, Container, ButtonM } from '../components';
 
 export default function App() {
   const { OS } = Platform;
@@ -15,6 +15,9 @@ export default function App() {
         >
           Hello BMOS, you're using {OS}.
         </Text>
+        <ButtonM>
+          <Text>Click me</Text>
+        </ButtonM>
       </Container>
     </Layout>
   );
