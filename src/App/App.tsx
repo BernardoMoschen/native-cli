@@ -1,6 +1,6 @@
 import { Platform, ScrollView, Text } from 'react-native';
 import React from 'react';
-import { Layout } from './src/components';
+import { Layout } from '../components';
 
 export default function App() {
   const { OS } = Platform;
