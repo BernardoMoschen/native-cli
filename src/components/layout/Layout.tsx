@@ -9,6 +9,7 @@ type Props = {
 export const Layout: FC<Props> = ({ children }) => (
   <SafeAreaView
     style={{
+      flex: 1,
       marginTop: Platform.OS === 'android' ? StatusBar.currentHeight : 0, // fixes appleOnly - SafeAreaView
     }}
   >
