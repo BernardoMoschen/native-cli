@@ -9,9 +9,15 @@ type Props = {
 export const Layout: FC<Props> = ({ children }) => (
   <SafeAreaView
     style={{
-      marginTop: Platform.OS === 'android' ? StatusBar.currentHeight : 0,
+      marginTop: Platform.OS === 'android' ? StatusBar.currentHeight : 0, // fixes appleOnly - SafeAreaView
     }}
   >
+    <StatusBar
+      backgroundColor={'#F00'} // AndroidOnly
+      barStyle={'light-content'}
+      animated
+      translucent
+    />
     {children}
   </SafeAreaView>
 );

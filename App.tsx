@@ -1,23 +1,13 @@
-import {
-  Platform,
-  ScrollView,
-  StatusBar,
-  Text,
-  SafeAreaView,
-} from 'react-native';
+import { Platform, ScrollView, Text } from 'react-native';
 import React from 'react';
+import { Layout } from './src/components';
 
 export default function App() {
   const { OS } = Platform;
 
   return (
-    <SafeAreaView>
-      <ScrollView style={{ backgroundColor: '#222' }}>
-        <StatusBar
-          backgroundColor={'#F00'} // AndroidOnly
-          barStyle={'light-content'}
-          animated
-        />
+    <Layout>
+      <ScrollView style={{ backgroundColor: '#222', height: '100%' }}>
         <Text
           style={{
             color: 'white',
@@ -26,6 +16,6 @@ export default function App() {
           Hello BMOS, you're using {OS}.
         </Text>
       </ScrollView>
-    </SafeAreaView>
+    </Layout>
   );
 }
