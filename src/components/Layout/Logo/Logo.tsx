@@ -6,9 +6,10 @@ export const Logo = () => {
     // <Link to='/' sx={{ display: 'flex' }}>
     <Image
       source={require('./assets/logoMobilePng.png')}
-      // style={{
-      //   margin: '20px 0px',
-      // }}
+      style={{
+        marginTop: 20,
+        marginBottom: 20,
+      }}
     />
     // </Link>
   );
