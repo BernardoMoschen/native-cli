@@ -1,11 +1,12 @@
 import React from 'react';
 import { View, Text } from 'react-native';
 import { ButtonM } from '../../components';
+import { Greetings } from './Greetings/Greetings';
 
 export const Home = ({ navigation }) => {
   return (
     <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-      <Text>Home Screen</Text>
+      <Greetings />
       <ButtonM
         onPress={() => {
           navigation.navigate('SignIn');
