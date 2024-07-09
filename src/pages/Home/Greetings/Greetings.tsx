@@ -3,7 +3,8 @@ import { View } from 'react-native';
 import styled from 'styled-components/native';
 
 const Box = styled.View({
-  width: '328px',
+  flex: 1,
+  // width: '328px',
   height: '84px',
   borderRadius: '16px',
   padding: '16px',

@@ -25,7 +25,11 @@
     "@babel/preset-env": "^7.20.0",
     "@babel/runtime": "^7.20.0",
     "@react-native/babel-preset": "0.74.85",
-    "@react-native/metro-config": "0.74.85"
+    "@react-native/metro-config": "0.74.85",
+    "@react-native/typescript-config": "0.74.85",
+    "@types/react": "^18.2.6",
+    "prettier": "2.8.8",
+    "typescript": "^5.5.3"
   },
   "engines": {
     "node": ">=18"

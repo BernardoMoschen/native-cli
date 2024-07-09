@@ -1,19 +1,20 @@
 import React from 'react';
 import { View, Text } from 'react-native';
-import { ButtonM } from '../../components';
-import { Greetings } from './Greetings/Greetings';
+import {ButtonM, Container} from '../../components';
+import {Greetings} from './Greetings/Greetings';
 
-export const Home = ({ navigation }) => {
+export const Home = ({navigation}) => {
   return (
-    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-      <Greetings />
-      <ButtonM
-        onPress={() => {
-          navigation.navigate('SignIn');
-        }}
-      >
-        <Text>Click to go to SignIn</Text>
-      </ButtonM>
-    </View>
+    <Container>
+      <View style={{flex: 1}}>
+        <Greetings />
+        <ButtonM
+          onPress={() => {
+            navigation.navigate('SignIn');
+          }}>
+          <Text>Click to go to SignIn</Text>
+        </ButtonM>
+      </View>
+    </Container>
   );
 };
