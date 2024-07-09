@@ -27,6 +27,12 @@ export const Home = ({navigation}) => {
           }}>
           <Text>Click to go to SignIn</Text>
         </ButtonM>
+        <ButtonM
+          onPress={() => {
+            navigation.navigate('NotFound');
+          }}>
+          <Text>Click to go to NotFound</Text>
+        </ButtonM>
       </View>
     </Container>
   );
