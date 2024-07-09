@@ -1,6 +1,7 @@
 import React, {FC, ReactNode} from 'react';
-import {View} from 'react-native';
+import {Pressable, Text, View} from 'react-native';
 import styled from 'styled-components/native';
+import {useRouterNavigation} from '../../../router/hooks/useRouterNavigation';
 
 const Box = styled.View({
   flex: 1,
@@ -32,11 +33,18 @@ type Props = {
 };
 
 export const CardNavigation: FC<Props> = ({title, navigateTo, children}) => {
+  const navigation = useRouterNavigation();
+
   return (
     <Box>
       <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>
         <Title>{title}</Title>
-        <NavigationText>{navigateTo}</NavigationText>
+        <Pressable
+          style={{flexDirection: 'row'}}
+          onPress={() => navigation.navigate(navigateTo)}>
+          <NavigationText>{navigateTo}</NavigationText>
+          <Text style={{fontSize: 6}}>Icon here</Text>
+        </Pressable>
       </View>
       {children}
     </Box>
